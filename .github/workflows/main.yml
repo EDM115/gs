@@ -7,7 +7,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "5 0 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in
@@ -55,14 +55,15 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EXCLUDED: ${{ secrets.EXCLUDED }}
         EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
-        EXCLUDE_FORKED_REPOS: true
+        EXCLUDE_FORKED_REPOS: false
 
     # Commits all changed files to the repository
     - name: Commit to the repo
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        d=`date '+%Y/%m/%dT%H:%M:%SZ'`
+        git config --global user.name "EDM115"
+        git config --global user.email "stats@edm115.eu.org"
         git add .
         # "echo" returns true so the build succeeds, even if no changed files
-        git commit -m 'Update generated files' || echo
+        git commit -m "Updated the stats at ${d}" || echo
         git push
