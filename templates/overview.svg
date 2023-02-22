@@ -54,7 +54,7 @@ tr {
 }
 
 .octicon {
-  fill: #f8f8f2;
+  fill: #50fa7b;
   margin-right: 1ch;
   vertical-align: top;
 }
