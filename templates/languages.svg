@@ -9,8 +9,8 @@ svg {
 #background {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
-  fill: #282a36;
-  stroke: #f8f8f2;
+  fill: #00040e;
+  stroke: #eae7de;
   stroke-width: 1px;
   rx: 6px;
   ry: 6px;
@@ -45,10 +45,7 @@ li {
   align-items: center;
   flex-wrap: nowrap;
   transform: translateX(-500%);
-  animation-duration: 2s;
-  animation-name: slideIn;
-  animation-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation: slideIn 2s ease-in-out forwards;
 }
 
 @keyframes slideIn {
@@ -64,7 +61,7 @@ div.ellipsis {
 }
 
 .octicon {
-  fill: #50fa7b;
+  fill: #bd93f9;
   margin-right: 0.5ch;
   vertical-align: top;
 }
@@ -73,25 +70,25 @@ div.ellipsis {
   display: flex;
   height: 8px;
   overflow: hidden;
-  background-color: #44475a;
+  background-color: #282a36;
   border-radius: 6px;
   outline: 1px solid transparent;
   margin-bottom: 1em;
 }
 
 .progress-item {
-  outline: 2px solid #44475a;
+  outline: 2px solid #282a36;
   border-collapse: collapse;
 }
 
 .lang {
   font-weight: 600;
   margin-right: 4px;
-  color: #f8f8f2;
+  color: #eae7de;
 }
 
 .percent {
-  color: #50fa7b
+  color: #bd93f9;
 }
 </style>
 <g>
@@ -100,7 +97,7 @@ div.ellipsis {
 <foreignObject x="21" y="17" width="318" height="176">
 <div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
 
-<h2>Languages Used (By File Size)</h2>
+<h2>Languages used (by file size)</h2>
 
 <div>
 <span class="progress">
